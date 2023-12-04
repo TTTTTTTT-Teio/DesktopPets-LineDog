@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/lalala">
+        <file>dogs/lalala/lalala (0).png</file>
+        <file>dogs/lalala/lalala (1).png</file>
+        <file>dogs/lalala/lalala (2).png</file>
+        <file>dogs/lalala/lalala (3).png</file>
+        <file>dogs/lalala/lalala (4).png</file>
+        <file>dogs/lalala/lalala (5).png</file>
+        <file>dogs/lalala/lalala (6).png</file>
+        <file>dogs/lalala/lalala (7).png</file>
+        <file>dogs/lalala/lalala (8).png</file>
+        <file>dogs/lalala/lalala (9).png</file>
+        <file>dogs/lalala/lalala (10).png</file>
+        <file>dogs/lalala/lalala (11).png</file>
+        <file>dogs/lalala/lalala (12).png</file>
+        <file>dogs/lalala/lalala (13).png</file>
+        <file>dogs/lalala/lalala (14).png</file>
+        <file>dogs/lalala/lalala (15).png</file>
+        <file>dogs/lalala/lalala (16).png</file>
+        <file>dogs/lalala/lalala (17).png</file>
+    </qresource>
+</RCC>
