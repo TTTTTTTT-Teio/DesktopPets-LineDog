@@ -1,0 +1,61 @@
+<RCC>
+    <qresource prefix="/nuli">
+        <file>dogs/nuli/(0).png</file>
+        <file>dogs/nuli/(1).png</file>
+        <file>dogs/nuli/(2).png</file>
+        <file>dogs/nuli/(3).png</file>
+        <file>dogs/nuli/(4).png</file>
+        <file>dogs/nuli/(5).png</file>
+        <file>dogs/nuli/(6).png</file>
+        <file>dogs/nuli/(7).png</file>
+        <file>dogs/nuli/(8).png</file>
+        <file>dogs/nuli/(9).png</file>
+        <file>dogs/nuli/(10).png</file>
+        <file>dogs/nuli/(11).png</file>
+        <file>dogs/nuli/(12).png</file>
+        <file>dogs/nuli/(13).png</file>
+        <file>dogs/nuli/(14).png</file>
+        <file>dogs/nuli/(15).png</file>
+        <file>dogs/nuli/(16).png</file>
+        <file>dogs/nuli/(17).png</file>
+        <file>dogs/nuli/(18).png</file>
+        <file>dogs/nuli/(19).png</file>
+        <file>dogs/nuli/(20).png</file>
+        <file>dogs/nuli/(21).png</file>
+        <file>dogs/nuli/(22).png</file>
+        <file>dogs/nuli/(23).png</file>
+        <file>dogs/nuli/(24).png</file>
+        <file>dogs/nuli/(25).png</file>
+        <file>dogs/nuli/(26).png</file>
+        <file>dogs/nuli/(27).png</file>
+        <file>dogs/nuli/(28).png</file>
+        <file>dogs/nuli/(29).png</file>
+        <file>dogs/nuli/(30).png</file>
+        <file>dogs/nuli/(31).png</file>
+        <file>dogs/nuli/(32).png</file>
+        <file>dogs/nuli/(33).png</file>
+        <file>dogs/nuli/(34).png</file>
+        <file>dogs/nuli/(35).png</file>
+        <file>dogs/nuli/(36).png</file>
+    </qresource>
+    <qresource prefix="/lalala">
+        <file>dogs/lalala/lalala (0).png</file>
+        <file>dogs/lalala/lalala (1).png</file>
+        <file>dogs/lalala/lalala (2).png</file>
+        <file>dogs/lalala/lalala (3).png</file>
+        <file>dogs/lalala/lalala (4).png</file>
+        <file>dogs/lalala/lalala (5).png</file>
+        <file>dogs/lalala/lalala (6).png</file>
+        <file>dogs/lalala/lalala (7).png</file>
+        <file>dogs/lalala/lalala (8).png</file>
+        <file>dogs/lalala/lalala (9).png</file>
+        <file>dogs/lalala/lalala (10).png</file>
+        <file>dogs/lalala/lalala (11).png</file>
+        <file>dogs/lalala/lalala (12).png</file>
+        <file>dogs/lalala/lalala (13).png</file>
+        <file>dogs/lalala/lalala (14).png</file>
+        <file>dogs/lalala/lalala (15).png</file>
+        <file>dogs/lalala/lalala (16).png</file>
+        <file>dogs/lalala/lalala (17).png</file>
+    </qresource>
+</RCC>

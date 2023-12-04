@@ -21,23 +21,41 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="GeneratedFiles">
+      <UniqueIdentifier>{994528fa-6204-4d71-b2af-df9db610b9bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="desktoppets_linedogs.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <ClCompile Include="desktoppets_linedogs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pets.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="GeneratedFiles\moc_ui_desktoppets_linedogs.cpp">
+      <Filter>GeneratedFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_desktoppets_linedogs.cpp">
+      <Filter>GeneratedFiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="pets.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
+    <None Include="DesktopPets_LineDogs.pro" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="Resource.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
+    <CustomBuild Include="desktoppets_linedogs.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_desktoppets_linedogs.h">
+      <Filter>GeneratedFiles</Filter>
+    </CustomBuild>
+    <CustomBuild Include="desktoppets_linedogs.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
