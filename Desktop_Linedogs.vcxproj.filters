@@ -21,15 +21,15 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
-    <Filter Include="GeneratedFiles">
-      <UniqueIdentifier>{994528fa-6204-4d71-b2af-df9db610b9bf}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="desktoppets_linedogs.qrc">
+    <QtRcc Include="widget.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <ClCompile Include="desktoppets_linedogs.cpp">
+    <QtMoc Include="widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="widget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,25 +37,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\moc_ui_desktoppets_linedogs.cpp">
-      <Filter>GeneratedFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\moc_desktoppets_linedogs.cpp">
-      <Filter>GeneratedFiles</Filter>
+    <ClCompile Include="normalmode.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DesktopPets_LineDogs.pro" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="desktoppets_linedogs.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="GeneratedFiles\ui_desktoppets_linedogs.h">
-      <Filter>GeneratedFiles</Filter>
-    </CustomBuild>
-    <CustomBuild Include="desktoppets_linedogs.h">
+    <QtMoc Include="normalmode.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
 </Project>
