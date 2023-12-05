@@ -1,5 +1,8 @@
 ﻿#include "normalmode.h"
+#include "movemode.h"
 #include "qtimer.h"
+#include "QMovie"
+#include "QMouseEvent"
 
 normalmode::normalmode(QWidget* parent)
 	:widget(parent)
@@ -9,7 +12,8 @@ normalmode::normalmode(QWidget* parent)
 	ui.setupUi(this);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();
-	updateRoleAnimation();
+	normalmode::updateRoleAnimation();
+	this->installEventFilter(this);
 }
 
 void normalmode::updateRoleAnimation()
@@ -30,9 +34,26 @@ void normalmode::updateAnimationTimer()
 void normalmode::NormalModeRoleAnimation()
 {
 	QString qcut("background-repeat:no-repeat;");	//裁剪背景图片
-	roleLabel->resize(200, 200);
+	roleLabel->resize(200, 200);	//设置窗口大小
 	roleLabel->setStyleSheet(qcut + QString("background-image:url(:/nuli/dogs/nuli/(%1).png);").arg(curFrame));	//窗口贴上背景图片
 	curFrame = (curFrame + 1) % 37;	//循环展示背景图片
+}
+
+bool normalmode::eventFilter(QObject* watched, QEvent* ev)
+{
+	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
+	//判断鼠标左键按下
+	static int clickAreaX,clickAreaY;
+	if (ev->type() == QEvent::MouseButtonPress)
+	{
+		clickAreaX = this->x();
+		clickAreaY = this->y();
+		movemode* m = new movemode();
+		m->move(clickAreaX,clickAreaY);
+		m->show();
+		this->close();
+	}
+	return false;
 }
 
 normalmode::~normalmode()

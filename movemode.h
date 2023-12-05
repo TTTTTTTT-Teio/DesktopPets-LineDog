@@ -6,18 +6,18 @@
 #include "widget.h"
 #include "ui_widget.h"
 
-class normalmode : public widget
+class movemode : public widget
 {
 	Q_OBJECT
 
 public:
-	normalmode(QWidget* parent = nullptr);
+	movemode(QWidget* parent = nullptr);
 	void updateRoleAnimation();	//选择播放的动作
 	void updateAnimationTimer();	//更新动画
-	void NormalModeRoleAnimation();	//常态化背景贴图
+	void MoveModeRoleAnimation();	//常态化背景贴图
 	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
 
-	~normalmode();
+	~movemode();
 
 private:
 	Ui::widgetClass ui;

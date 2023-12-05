@@ -92,12 +92,16 @@
   <ItemGroup>
     <QtRcc Include="widget.qrc" />
     <QtMoc Include="widget.h" />
+    <ClCompile Include="movemode.cpp" />
     <ClCompile Include="normalmode.cpp" />
     <ClCompile Include="widget.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="normalmode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="movemode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
