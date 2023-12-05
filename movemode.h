@@ -18,7 +18,7 @@ public:
 	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
 
 	~movemode();
-
+protected:
 private:
 	Ui::widgetClass ui;
 	QLabel* roleLabel;

@@ -1,4 +1,5 @@
-﻿#include "movemode.h"
+﻿#include "normalmode.h"
+#include "movemode.h"
 #include "qtimer.h"
 #include "QMovie"
 #include "QMouseEvent"
@@ -43,6 +44,7 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
 	//判断鼠标左键按下
 	static QPoint clickArea;
+	static int clickAreaX, clickAreaY;
 	if (ev->type() == QEvent::MouseButtonPress)
 	{
 		clickArea = mouseev->globalPos() - this->pos();
@@ -51,9 +53,19 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 	{
 		this->move(mouseev->globalPos() - clickArea);
 	}
+	if (ev->type() == QEvent::MouseButtonRelease)
+	{
+		normalmode* n = new normalmode();
+		clickAreaX = this->x();
+		clickAreaY = this->y();
+		n->move(clickAreaX-20, clickAreaY+20);
+		n->show();
+		this->close();
+	}
 	return false;
 }
 
 movemode::~movemode()
 {
 }
+
