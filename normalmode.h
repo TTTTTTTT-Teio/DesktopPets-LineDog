@@ -21,6 +21,9 @@ protected:
 	void updateRoleAnimation();	//选择播放的动作
 	void updateAnimationTimer();	//更新动画
 	void NormalModeRoleAnimation();	//常态化背景贴图
+	void gotoMovemode();
+	void closeWidget();
+	void openMenu();
 
 private:
 	Ui::widgetClass ui;

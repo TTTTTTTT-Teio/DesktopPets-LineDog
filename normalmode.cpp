@@ -40,28 +40,46 @@ void normalmode::NormalModeRoleAnimation()
 	curFrame = (curFrame + 1) % 37;	//循环展示背景图片
 }
 
+void normalmode::gotoMovemode()
+{
+	static int clickAreaX, clickAreaY;
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	movemode* m = new movemode();
+	m->move(clickAreaX + 35, clickAreaY - 35);
+	m->show();
+	this->close();
+}
+
+void normalmode::closeWidget()
+{
+	this->close();
+}
+
+void normalmode::openMenu()
+{
+	QMenu* menu = new QMenu;
+
+	QAction* closeAction = new QAction;
+	closeAction->setText("关闭");
+	connect(closeAction,&QAction::triggered,this,&normalmode::closeWidget);
+
+	menu->addAction(closeAction);
+	menu->exec(QCursor::pos());
+}
+
 bool normalmode::eventFilter(QObject* watched, QEvent* ev)
 {
 	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
 	//判断鼠标左键按下
-	static int clickAreaX,clickAreaY;
+
 	if (ev->type() == QEvent::MouseButtonPress && mouseev->buttons() & Qt::MouseButton::LeftButton)
 	{
-		clickAreaX = this->x();
-		clickAreaY = this->y();
-		movemode* m = new movemode();
-		m->move(clickAreaX + 35, clickAreaY - 35);
-		m->show();
-		this->close();
+		gotoMovemode();
 	}
 	if (ev->type() == QEvent::MouseButtonPress && mouseev->buttons() & Qt::MouseButton::RightButton)
 	{
-		QMenu* menu = new QMenu;
-		QAction* saveaction = new QAction;
-		saveaction->setText("按钮1");
-		menu->addAction(saveaction);
-		menu->exec(QCursor::pos());
-		return true;
+		openMenu();
 	}
 	return false;
 }

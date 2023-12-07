@@ -14,7 +14,11 @@ MOC_DIR += GeneratedFiles/$(ConfigurationName)
 OBJECTS_DIR += debug
 UI_DIR += GeneratedFiles
 RCC_DIR += GeneratedFiles
-HEADERS += ./widget.h
+HEADERS += ./widget.h   \
+    ./normalmode.h  \
+    ./movemode.h
 SOURCES += ./widget.cpp \
+    ./normalmode.cpp    \
+    ./movemode.cpp  \
     ./main.cpp
 RESOURCES += widget.qrc

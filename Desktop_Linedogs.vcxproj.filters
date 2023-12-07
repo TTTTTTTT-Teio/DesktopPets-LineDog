@@ -52,4 +52,7 @@
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Desktop_Linedogs.pro" />
+  </ItemGroup>
 </Project>

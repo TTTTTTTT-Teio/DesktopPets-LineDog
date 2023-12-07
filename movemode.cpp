@@ -73,5 +73,6 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 
 movemode::~movemode()
 {
+	
 }
 
