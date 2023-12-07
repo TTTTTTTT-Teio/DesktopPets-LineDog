@@ -58,4 +58,28 @@
         <file>dogs/lalala/lalala (16).png</file>
         <file>dogs/lalala/lalala (17).png</file>
     </qresource>
+    <qresource prefix="/zangzangdogs">
+        <file>dogs/zangzangdogs/0.png</file>
+        <file>dogs/zangzangdogs/1.png</file>
+        <file>dogs/zangzangdogs/2.png</file>
+        <file>dogs/zangzangdogs/3.png</file>
+        <file>dogs/zangzangdogs/4.png</file>
+        <file>dogs/zangzangdogs/5.png</file>
+        <file>dogs/zangzangdogs/6.png</file>
+        <file>dogs/zangzangdogs/7.png</file>
+        <file>dogs/zangzangdogs/8.png</file>
+        <file>dogs/zangzangdogs/9.png</file>
+        <file>dogs/zangzangdogs/10.png</file>
+        <file>dogs/zangzangdogs/11.png</file>
+        <file>dogs/zangzangdogs/12.png</file>
+        <file>dogs/zangzangdogs/13.png</file>
+        <file>dogs/zangzangdogs/14.png</file>
+        <file>dogs/zangzangdogs/15.png</file>
+        <file>dogs/zangzangdogs/16.png</file>
+        <file>dogs/zangzangdogs/17.png</file>
+        <file>dogs/zangzangdogs/18.png</file>
+        <file>dogs/zangzangdogs/19.png</file>
+        <file>dogs/zangzangdogs/20.png</file>
+        <file>dogs/zangzangdogs/21.png</file>
+    </qresource>
 </RCC>

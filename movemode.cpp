@@ -10,6 +10,7 @@ movemode::movemode(QWidget* parent)
 	, curFrame(0)
 {
 	ui.setupUi(this);
+	setAttribute(Qt::WA_DeleteOnClose);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();
 	movemode::updateRoleAnimation();

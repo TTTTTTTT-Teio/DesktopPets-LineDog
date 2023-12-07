@@ -1,5 +1,6 @@
 ﻿#include "normalmode.h"
 #include "movemode.h"
+#include "dirtymode.h"
 #include "qtimer.h"
 #include "QMovie"
 #include "QMouseEvent"
@@ -11,6 +12,7 @@ normalmode::normalmode(QWidget* parent)
 	, curFrame(0)
 {
 	ui.setupUi(this);
+	setAttribute(Qt::WA_DeleteOnClose);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();
 	normalmode::updateRoleAnimation();
@@ -21,6 +23,7 @@ void normalmode::updateRoleAnimation()
 {
 	NormalModeRoleAnimation();
 	updateAnimationTimer();
+	gotoDirtymodeTimer();
 }
 
 void normalmode::updateAnimationTimer()
@@ -28,8 +31,19 @@ void normalmode::updateAnimationTimer()
 	//定时器更新动画（循环一次背景图片更新一次）
 	QTimer* updateTimer = new QTimer(this);
 	updateTimer->setTimerType(Qt::PreciseTimer);
-	updateTimer->start(100);
-	updateTimer->callOnTimeout(this, &normalmode::NormalModeRoleAnimation);
+	updateTimer->setInterval(100);
+	connect(updateTimer, &QTimer::timeout, this, &normalmode::NormalModeRoleAnimation);
+	updateTimer->start();
+}
+
+void normalmode::gotoDirtymodeTimer()
+{
+	QTimer* dirtyTimer = new QTimer(this);
+	dirtyTimer->setTimerType(Qt::PreciseTimer);
+	dirtyTimer->setSingleShot(true);
+	dirtyTimer->setInterval(600000);
+	connect(dirtyTimer,&QTimer::timeout,this,&normalmode::gotoDirtymode);
+	dirtyTimer->start();
 }
 
 void normalmode::NormalModeRoleAnimation()
@@ -48,6 +62,17 @@ void normalmode::gotoMovemode()
 	movemode* m = new movemode();
 	m->move(clickAreaX + 35, clickAreaY - 35);
 	m->show();
+	this->close();
+}
+
+void normalmode::gotoDirtymode()
+{
+	static int clickAreaX, clickAreaY;
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	dirtymode* d = new dirtymode();
+	d->move(clickAreaX + 35, clickAreaY - 150);
+	d->show();
 	this->close();
 }
 
