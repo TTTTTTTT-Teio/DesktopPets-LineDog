@@ -3,6 +3,7 @@
 #include "qtimer.h"
 #include "QMovie"
 #include "QMouseEvent"
+#include "Qmenu"
 
 normalmode::normalmode(QWidget* parent)
 	:widget(parent)
@@ -44,7 +45,7 @@ bool normalmode::eventFilter(QObject* watched, QEvent* ev)
 	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
 	//判断鼠标左键按下
 	static int clickAreaX,clickAreaY;
-	if (ev->type() == QEvent::MouseButtonPress)
+	if (ev->type() == QEvent::MouseButtonPress && mouseev->buttons() & Qt::MouseButton::LeftButton)
 	{
 		clickAreaX = this->x();
 		clickAreaY = this->y();
@@ -52,6 +53,15 @@ bool normalmode::eventFilter(QObject* watched, QEvent* ev)
 		m->move(clickAreaX + 35, clickAreaY - 35);
 		m->show();
 		this->close();
+	}
+	if (ev->type() == QEvent::MouseButtonPress && mouseev->buttons() & Qt::MouseButton::RightButton)
+	{
+		QMenu* menu = new QMenu;
+		QAction* saveaction = new QAction;
+		saveaction->setText("按钮1");
+		menu->addAction(saveaction);
+		menu->exec(QCursor::pos());
+		return true;
 	}
 	return false;
 }

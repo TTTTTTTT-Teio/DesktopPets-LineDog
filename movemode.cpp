@@ -39,12 +39,23 @@ void movemode::MoveModeRoleAnimation()
 	curFrame = (curFrame + 1) % 18;	//循环展示背景图片
 }
 
+void movemode::returnNormalMode()
+{
+	static int clickAreaX, clickAreaY;
+	normalmode* n = new normalmode();
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	n->move(clickAreaX - 35, clickAreaY + 35);
+	n->show();
+	this->close();
+}
+
 bool movemode::eventFilter(QObject* watched, QEvent* ev)
 {
 	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
 	//判断鼠标左键按下
 	static QPoint clickArea;
-	static int clickAreaX, clickAreaY;
+	
 	if (ev->type() == QEvent::MouseButtonPress)
 	{
 		clickArea = mouseev->globalPos() - this->pos();
@@ -55,12 +66,7 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 	}
 	if (ev->type() == QEvent::MouseButtonRelease)
 	{
-		normalmode* n = new normalmode();
-		clickAreaX = this->x();
-		clickAreaY = this->y();
-		n->move(clickAreaX - 35, clickAreaY + 35);
-		n->show();
-		this->close();
+		returnNormalMode();
 	}
 	return false;
 }
