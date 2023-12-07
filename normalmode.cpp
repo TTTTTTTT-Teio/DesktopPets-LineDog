@@ -49,7 +49,7 @@ bool normalmode::eventFilter(QObject* watched, QEvent* ev)
 		clickAreaX = this->x();
 		clickAreaY = this->y();
 		movemode* m = new movemode();
-		m->move(clickAreaX+20,clickAreaY-20);
+		m->move(clickAreaX + 35, clickAreaY - 35);
 		m->show();
 		this->close();
 	}
