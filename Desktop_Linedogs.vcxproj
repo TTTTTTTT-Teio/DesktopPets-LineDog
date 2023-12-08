@@ -95,6 +95,7 @@
     <ClCompile Include="dirtymode.cpp" />
     <ClCompile Include="movemode.cpp" />
     <ClCompile Include="normalmode.cpp" />
+    <ClCompile Include="washmode.cpp" />
     <ClCompile Include="widget.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -105,10 +106,10 @@
     <QtMoc Include="movemode.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Desktop_Linedogs.pro" />
+    <QtMoc Include="dirtymode.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="dirtymode.h" />
+    <QtMoc Include="washmode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

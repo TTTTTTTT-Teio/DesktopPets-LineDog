@@ -4,7 +4,6 @@
 #include <Qlabel>
 #include <QPixmap>
 #include "widget.h"
-#include "ui_widget.h"
 
 class movemode : public widget
 {
@@ -24,7 +23,6 @@ protected:
 	void returnNormalMode();	//回到常态模式
 
 private:
-	Ui::widgetClass ui;
 	QLabel* roleLabel;
 	int8_t curFrame;	//当前图片
 };

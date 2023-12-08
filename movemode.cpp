@@ -9,7 +9,6 @@ movemode::movemode(QWidget* parent)
 	, roleLabel(new QLabel(this))
 	, curFrame(0)
 {
-	ui.setupUi(this);
 	setAttribute(Qt::WA_DeleteOnClose);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();

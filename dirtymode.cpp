@@ -1,6 +1,6 @@
 ﻿#include "normalmode.h"
-#include "movemode.h"
 #include "dirtymode.h"
+#include "washmode.h"
 #include "qtimer.h"
 #include "QMovie"
 #include "QMouseEvent"
@@ -11,7 +11,6 @@ dirtymode::dirtymode(QWidget* parent)
 	, roleLabel(new QLabel(this))
 	, curFrame(0)
 {
-	ui.setupUi(this);
 	setAttribute(Qt::WA_DeleteOnClose);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();
@@ -44,6 +43,17 @@ void dirtymode::DirtyModeRoleAnimation()
 	curFrame = (curFrame + 1) % 21;	//循环展示背景图片
 }
 
+void dirtymode::gotoWashmode()
+{
+	static int clickAreaX, clickAreaY;
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	washmode* wa = new washmode();
+	wa->move(clickAreaX + 25, clickAreaY + 25);
+	wa->show();
+	this->close();
+}
+
 void dirtymode::closeWidget()
 {
 	this->close();
@@ -57,7 +67,12 @@ void dirtymode::openMenu()
 	closeAction->setText("关闭");
 	connect(closeAction, &QAction::triggered, this, &dirtymode::closeWidget);
 
+	QAction* gotoWashAction = new QAction;
+	gotoWashAction->setText("洗澡");
+	connect(gotoWashAction, &QAction::triggered, this, &dirtymode::gotoWashmode);
+
 	menu->addAction(closeAction);
+	menu->addAction(gotoWashAction);
 	menu->exec(QCursor::pos());
 }
 

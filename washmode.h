@@ -1,28 +1,27 @@
 ﻿#pragma once
 
+#pragma once
+
 #include <QtWidgets/QWidget>
 #include <Qlabel>
 #include <QPixmap>
 #include "widget.h"
 
-class dirtymode : public widget
+class washmode : public widget
 {
 	Q_OBJECT
 
 public:
-	dirtymode(QWidget* parent = nullptr);
+	washmode(QWidget* parent = nullptr);
 
-	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
-
-	~dirtymode();
+	~washmode();
 
 protected:
 	void updateRoleAnimation();	//选择播放的动作
 	void updateAnimationTimer();	//更新动画
-	void DirtyModeRoleAnimation();	//常态化背景贴图
-	void gotoWashmode();
-	void closeWidget();
-	void openMenu();
+	void WashModeRoleAnimation();	//常态化背景贴图
+	void returnNormalModeTimer();
+	void returnNormalMode();	//回到常态模式
 
 private:
 	QLabel* roleLabel;

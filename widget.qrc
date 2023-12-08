@@ -82,4 +82,38 @@
         <file>dogs/zangzangdogs/20.png</file>
         <file>dogs/zangzangdogs/21.png</file>
     </qresource>
+    <qresource prefix="/wash">
+        <file>dogs/wash/0.png</file>
+        <file>dogs/wash/1.png</file>
+        <file>dogs/wash/2.png</file>
+        <file>dogs/wash/3.png</file>
+        <file>dogs/wash/4.png</file>
+        <file>dogs/wash/5.png</file>
+        <file>dogs/wash/6.png</file>
+        <file>dogs/wash/7.png</file>
+        <file>dogs/wash/8.png</file>
+        <file>dogs/wash/9.png</file>
+        <file>dogs/wash/10.png</file>
+        <file>dogs/wash/11.png</file>
+        <file>dogs/wash/12.png</file>
+        <file>dogs/wash/13.png</file>
+        <file>dogs/wash/14 - 副本.png</file>
+        <file>dogs/wash/14.png</file>
+        <file>dogs/wash/15.png</file>
+        <file>dogs/wash/16.png</file>
+        <file>dogs/wash/17.png</file>
+        <file>dogs/wash/18.png</file>
+        <file>dogs/wash/19.png</file>
+        <file>dogs/wash/20.png</file>
+        <file>dogs/wash/21.png</file>
+        <file>dogs/wash/22.png</file>
+        <file>dogs/wash/23.png</file>
+        <file>dogs/wash/24.png</file>
+        <file>dogs/wash/25.png</file>
+        <file>dogs/wash/26.png</file>
+        <file>dogs/wash/27.png</file>
+        <file>dogs/wash/28.png</file>
+        <file>dogs/wash/29.png</file>
+        <file>dogs/wash/30.png</file>
+    </qresource>
 </RCC>
