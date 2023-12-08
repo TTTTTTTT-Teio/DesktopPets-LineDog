@@ -30,8 +30,9 @@ void dirtymode::updateAnimationTimer()
 	//定时器更新动画（循环一次背景图片更新一次）
 	QTimer* updateTimer = new QTimer(this);
 	updateTimer->setTimerType(Qt::PreciseTimer);
-	updateTimer->start(100);
-	updateTimer->callOnTimeout(this, &dirtymode::DirtyModeRoleAnimation);
+	updateTimer->setInterval(100);
+	connect(updateTimer, &QTimer::timeout, this, &dirtymode::DirtyModeRoleAnimation);
+	updateTimer->start();
 }
 
 void dirtymode::DirtyModeRoleAnimation()

@@ -28,8 +28,9 @@ void movemode::updateAnimationTimer()
 	//定时器更新动画（循环一次背景图片更新一次）
 	QTimer* updateTimer = new QTimer(this);
 	updateTimer->setTimerType(Qt::PreciseTimer);
-	updateTimer->start(100);
-	updateTimer->callOnTimeout(this, &movemode::MoveModeRoleAnimation);
+	updateTimer->setInterval(100);
+	connect(updateTimer, &QTimer::timeout, this, &movemode::MoveModeRoleAnimation);
+	updateTimer->start();
 }
 
 void movemode::MoveModeRoleAnimation()

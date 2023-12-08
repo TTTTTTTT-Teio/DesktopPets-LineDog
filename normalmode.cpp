@@ -41,7 +41,7 @@ void normalmode::gotoDirtymodeTimer()
 	QTimer* dirtyTimer = new QTimer(this);
 	dirtyTimer->setTimerType(Qt::PreciseTimer);
 	dirtyTimer->setSingleShot(true);
-	dirtyTimer->setInterval(600000);
+	dirtyTimer->setInterval(/*600000*/10000);
 	connect(dirtyTimer,&QTimer::timeout,this,&normalmode::gotoDirtymode);
 	dirtyTimer->start();
 }
@@ -71,7 +71,7 @@ void normalmode::gotoDirtymode()
 	clickAreaX = this->x();
 	clickAreaY = this->y();
 	dirtymode* d = new dirtymode();
-	d->move(clickAreaX + 35, clickAreaY - 150);
+	d->move(clickAreaX + 50, clickAreaY - 100);
 	d->show();
 	this->close();
 }
