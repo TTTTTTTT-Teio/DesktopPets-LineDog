@@ -54,13 +54,13 @@
     <QtMoc Include="normalmode.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="movemode.h">
+    <QtMoc Include="washmode.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="dirtymode.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="washmode.h">
+    <QtMoc Include="movemode.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

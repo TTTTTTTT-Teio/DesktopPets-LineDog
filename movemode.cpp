@@ -56,7 +56,7 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 	QMouseEvent* mouseev = static_cast<QMouseEvent*>(ev);
 	//判断鼠标左键按下
 	static QPoint clickArea;
-	
+
 	if (ev->type() == QEvent::MouseButtonPress)
 	{
 		clickArea = mouseev->globalPos() - this->pos();
@@ -74,6 +74,6 @@ bool movemode::eventFilter(QObject* watched, QEvent* ev)
 
 movemode::~movemode()
 {
-	
+
 }
 

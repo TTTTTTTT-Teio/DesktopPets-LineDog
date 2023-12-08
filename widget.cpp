@@ -1,8 +1,8 @@
 ﻿#include "widget.h"
 #include "QGraphicsDropShadowEffect"
 
-widget::widget(QWidget *parent)
-    : QWidget(parent)
+widget::widget(QWidget* parent)
+	: QWidget(parent)
 {
 
 }

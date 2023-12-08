@@ -42,7 +42,7 @@ void normalmode::gotoDirtymodeTimer()
 	dirtyTimer->setTimerType(Qt::PreciseTimer);
 	dirtyTimer->setSingleShot(true);
 	dirtyTimer->setInterval(/*600000*/10000);
-	connect(dirtyTimer,&QTimer::timeout,this,&normalmode::gotoDirtymode);
+	connect(dirtyTimer, &QTimer::timeout, this, &normalmode::gotoDirtymode);
 	dirtyTimer->start();
 }
 
@@ -98,7 +98,7 @@ void normalmode::openMenu()
 
 	QAction* closeAction = new QAction;
 	closeAction->setText("关闭");
-	connect(closeAction,&QAction::triggered,this,&normalmode::closeWidget);
+	connect(closeAction, &QAction::triggered, this, &normalmode::closeWidget);
 
 	QAction* gotoWashAction = new QAction;
 	gotoWashAction->setText("洗澡");

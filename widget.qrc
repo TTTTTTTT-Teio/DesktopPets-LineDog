@@ -58,6 +58,26 @@
         <file>dogs/lalala/lalala (16).png</file>
         <file>dogs/lalala/lalala (17).png</file>
     </qresource>
+    <qresource prefix="/huaquanquan">
+        <file>dogs/huaquanquan/hua (0).png</file>
+        <file>dogs/huaquanquan/hua (1).png</file>
+        <file>dogs/huaquanquan/hua (2).png</file>
+        <file>dogs/huaquanquan/hua (3).png</file>
+        <file>dogs/huaquanquan/hua (4).png</file>
+        <file>dogs/huaquanquan/hua (5).png</file>
+        <file>dogs/huaquanquan/hua (6).png</file>
+        <file>dogs/huaquanquan/hua (7).png</file>
+        <file>dogs/huaquanquan/hua (8).png</file>
+        <file>dogs/huaquanquan/hua (9).png</file>
+        <file>dogs/huaquanquan/hua (10).png</file>
+        <file>dogs/huaquanquan/hua (11).png</file>
+        <file>dogs/huaquanquan/hua (12).png</file>
+        <file>dogs/huaquanquan/hua (13).png</file>
+        <file>dogs/huaquanquan/hua (14).png</file>
+        <file>dogs/huaquanquan/hua (15).png</file>
+        <file>dogs/huaquanquan/hua (16).png</file>
+        <file>dogs/huaquanquan/hua (17).png</file>
+    </qresource>
     <qresource prefix="/zangzangdogs">
         <file>dogs/zangzangdogs/0.png</file>
         <file>dogs/zangzangdogs/1.png</file>
@@ -97,7 +117,6 @@
         <file>dogs/wash/11.png</file>
         <file>dogs/wash/12.png</file>
         <file>dogs/wash/13.png</file>
-        <file>dogs/wash/14 - 副本.png</file>
         <file>dogs/wash/14.png</file>
         <file>dogs/wash/15.png</file>
         <file>dogs/wash/16.png</file>
