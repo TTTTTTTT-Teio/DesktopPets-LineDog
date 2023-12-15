@@ -1,10 +1,7 @@
 ﻿#include "normalmode.h"
 #include "dirtymode.h"
 #include "washmode.h"
-#include "qtimer.h"
-#include "QMovie"
-#include "QMouseEvent"
-#include "Qmenu"
+
 
 dirtymode::dirtymode(QWidget* parent)
 	:widget(parent)

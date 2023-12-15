@@ -3,6 +3,8 @@
 #include <QtWidgets/QWidget>
 #include <Qlabel>
 #include <QPixmap>
+#include "qtimer.h"
+#include "QMouseEvent"
 #include "widget.h"
 
 class movemode : public widget
@@ -11,12 +13,12 @@ class movemode : public widget
 
 public:
 	movemode(QWidget* parent = nullptr);
-
-	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
-
 	~movemode();
 
 protected:
+	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
+
+private:
 	void updateRoleAnimation();	//选择播放的动作
 	void updateAnimationTimer();	//更新动画
 	void MoveModeRoleAnimation();	//常态化背景贴图

@@ -115,4 +115,86 @@
         <file>dogs/wash/29.png</file>
         <file>dogs/wash/30.png</file>
     </qresource>
+    <qresource prefix="/game_run">
+        <file>dogs/game_run/r (0).png</file>
+        <file>dogs/game_run/r (1).png</file>
+        <file>dogs/game_run/r (2).png</file>
+        <file>dogs/game_run/r (3).png</file>
+        <file>dogs/game_run/r (4).png</file>
+        <file>dogs/game_run/r (5).png</file>
+        <file>dogs/game_run/r (6).png</file>
+        <file>dogs/game_run/r (7).png</file>
+        <file>dogs/game_run/r (8).png</file>
+        <file>dogs/game_run/r (9).png</file>
+        <file>dogs/game_run/r (10).png</file>
+        <file>dogs/game_run/r (11).png</file>
+        <file>dogs/game_run/r (12).png</file>
+        <file>dogs/game_run/r (13).png</file>
+        <file>dogs/game_run/r (14).png</file>
+        <file>dogs/game_run/r (15).png</file>
+    </qresource>
+    <qresource prefix="/game_obstacle">
+        <file>dogs/game_obstacle/obstacle.png</file>
+    </qresource>
+    <qresource prefix="/game_background">
+        <file>dogs/game_background/background.png</file>
+    </qresource>
+    <qresource prefix="/cry">
+        <file>dogs/cry/0.png</file>
+        <file>dogs/cry/1.png</file>
+        <file>dogs/cry/2.png</file>
+        <file>dogs/cry/3.png</file>
+        <file>dogs/cry/4.png</file>
+        <file>dogs/cry/5.png</file>
+        <file>dogs/cry/6.png</file>
+        <file>dogs/cry/7.png</file>
+        <file>dogs/cry/8.png</file>
+        <file>dogs/cry/9.png</file>
+        <file>dogs/cry/10.png</file>
+        <file>dogs/cry/11.png</file>
+        <file>dogs/cry/12.png</file>
+        <file>dogs/cry/13.png</file>
+        <file>dogs/cry/14.png</file>
+        <file>dogs/cry/15.png</file>
+        <file>dogs/cry/16.png</file>
+        <file>dogs/cry/17.png</file>
+        <file>dogs/cry/18.png</file>
+        <file>dogs/cry/19.png</file>
+        <file>dogs/cry/20.png</file>
+    </qresource>
+    <qresource prefix="/left_automove">
+        <file>dogs/left_automove/0.png</file>
+        <file>dogs/left_automove/1.png</file>
+        <file>dogs/left_automove/2.png</file>
+        <file>dogs/left_automove/3.png</file>
+        <file>dogs/left_automove/4.png</file>
+        <file>dogs/left_automove/5.png</file>
+        <file>dogs/left_automove/6.png</file>
+        <file>dogs/left_automove/7.png</file>
+        <file>dogs/left_automove/8.png</file>
+        <file>dogs/left_automove/9.png</file>
+        <file>dogs/left_automove/10.png</file>
+        <file>dogs/left_automove/11.png</file>
+        <file>dogs/left_automove/12.png</file>
+        <file>dogs/left_automove/13.png</file>
+    </qresource>
+    <qresource prefix="/right_automove">
+        <file>dogs/right_automove/0.png</file>
+        <file>dogs/right_automove/1.png</file>
+        <file>dogs/right_automove/2.png</file>
+        <file>dogs/right_automove/3.png</file>
+        <file>dogs/right_automove/4.png</file>
+        <file>dogs/right_automove/5.png</file>
+        <file>dogs/right_automove/6.png</file>
+        <file>dogs/right_automove/7.png</file>
+        <file>dogs/right_automove/8.png</file>
+        <file>dogs/right_automove/9.png</file>
+        <file>dogs/right_automove/10.png</file>
+        <file>dogs/right_automove/11.png</file>
+        <file>dogs/right_automove/12.png</file>
+        <file>dogs/right_automove/13.png</file>
+    </qresource>
+    <qresource prefix="/Icon">
+        <file>dogs/windowsicon/icom.png</file>
+    </qresource>
 </RCC>

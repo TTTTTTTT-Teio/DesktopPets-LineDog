@@ -1,8 +1,7 @@
 ﻿#include "normalmode.h"
-#include "movemode.h"
-#include "washmode.h"
+#include "crymode.h"
 
-washmode::washmode(QWidget* parent)
+crymode::crymode(QWidget* parent)
 	:widget(parent)
 	, roleLabel(new QLabel(this))
 	, curFrame(0)
@@ -10,56 +9,57 @@ washmode::washmode(QWidget* parent)
 	setAttribute(Qt::WA_DeleteOnClose);
 	widget::WidgetsParameter();
 	widget::ShadowEffect();
-	washmode::updateRoleAnimation();
+	crymode::updateRoleAnimation();
 }
 
-void washmode::updateRoleAnimation()
+void crymode::updateRoleAnimation()
 {
-	WashModeRoleAnimation();
+	CryModeRoleAnimation();
 	updateAnimationTimer();
 	returnNormalModeTimer();
 }
 
-void washmode::updateAnimationTimer()
+void crymode::updateAnimationTimer()
 {
 	//定时器更新动画（循环一次背景图片更新一次）
 	QTimer* updateTimer = new QTimer(this);
 	updateTimer->setTimerType(Qt::PreciseTimer);
 	updateTimer->setInterval(100);
-	connect(updateTimer, &QTimer::timeout, this, &washmode::WashModeRoleAnimation);
+	connect(updateTimer, &QTimer::timeout, this, &crymode::CryModeRoleAnimation);
 	updateTimer->start();
 }
 
-void washmode::WashModeRoleAnimation()
+void crymode::CryModeRoleAnimation()
 {
 	QString qcut("background-repeat:no-repeat;");	//裁剪背景图片
+	QString qpos("background-position: bottom left;");
 	roleLabel->resize(200, 200);	//设置窗口大小
-	roleLabel->setStyleSheet(qcut + QString("background-image:url(:/wash/dogs/wash/%1.png);").arg(curFrame));	//窗口贴上背景图片
+	roleLabel->setStyleSheet(qpos + qcut + QString("background-image:url(:/cry/dogs/cry/%1.png);").arg(curFrame));	//窗口贴上背景图片
 	curFrame = curFrame + 1;	//循环展示背景图片
 }
 
-void washmode::returnNormalModeTimer()
+void crymode::returnNormalModeTimer()
 {
 	QTimer* returnTimer = new QTimer(this);
 	returnTimer->setTimerType(Qt::PreciseTimer);
 	returnTimer->setSingleShot(true);
 	returnTimer->setInterval(3000);
-	connect(returnTimer, &QTimer::timeout, this, &washmode::returnNormalMode);
+	connect(returnTimer, &QTimer::timeout, this, &crymode::returnNormalMode);
 	returnTimer->start();
 }
 
-void washmode::returnNormalMode()
+void crymode::returnNormalMode()
 {
 	static int clickAreaX, clickAreaY;
 	normalmode* n = new normalmode();
 	clickAreaX = this->x();
 	clickAreaY = this->y();
-	n->move(clickAreaX - 35, clickAreaY + 75);
+	n->move(clickAreaX - 40, clickAreaY + 100);
 	n->show();
 	this->close();
 }
 
-washmode::~washmode()
+crymode::~crymode()
 {
 
 }

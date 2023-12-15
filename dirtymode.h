@@ -3,6 +3,9 @@
 #include <QtWidgets/QWidget>
 #include <Qlabel>
 #include <QPixmap>
+#include "qtimer.h"
+#include "QMouseEvent"
+#include "Qmenu"
 #include "widget.h"
 
 class dirtymode : public widget
@@ -11,12 +14,12 @@ class dirtymode : public widget
 
 public:
 	dirtymode(QWidget* parent = nullptr);
-
-	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
-
 	~dirtymode();
 
 protected:
+	bool eventFilter(QObject* watched, QEvent* ev)override;	//左键敲击事件
+
+private:
 	void updateRoleAnimation();	//选择播放的动作
 	void updateAnimationTimer();	//更新动画
 	void DirtyModeRoleAnimation();	//常态化背景贴图

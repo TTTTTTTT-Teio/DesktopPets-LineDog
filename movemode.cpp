@@ -1,8 +1,5 @@
 ﻿#include "normalmode.h"
 #include "movemode.h"
-#include "qtimer.h"
-#include "QMovie"
-#include "QMouseEvent"
 
 movemode::movemode(QWidget* parent)
 	:widget(parent)

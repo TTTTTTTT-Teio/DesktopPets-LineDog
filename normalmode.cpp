@@ -2,10 +2,9 @@
 #include "movemode.h"
 #include "dirtymode.h"
 #include "washmode.h"
-#include "qtimer.h"
-#include "QMovie"
-#include "QMouseEvent"
-#include "Qmenu"
+#include "game_main.h"
+#include "automovemode.h"
+
 
 normalmode::normalmode(QWidget* parent)
 	:widget(parent)
@@ -24,6 +23,7 @@ void normalmode::updateRoleAnimation()
 	NormalModeRoleAnimation();
 	updateAnimationTimer();
 	gotoDirtymodeTimer();
+	gotoAutoMovemodeTimer();
 }
 
 void normalmode::updateAnimationTimer()
@@ -41,9 +41,25 @@ void normalmode::gotoDirtymodeTimer()
 	QTimer* dirtyTimer = new QTimer(this);
 	dirtyTimer->setTimerType(Qt::PreciseTimer);
 	dirtyTimer->setSingleShot(true);
-	dirtyTimer->setInterval(/*600000*/10000);
+	dirtyTimer->setInterval(/*600000*/6000000);
 	connect(dirtyTimer,&QTimer::timeout,this,&normalmode::gotoDirtymode);
 	dirtyTimer->start();
+}
+
+void normalmode::gotoAutoMovemodeTimer()
+{
+	QTimer* automoveTimer = new QTimer(this);
+	automoveTimer->setTimerType(Qt::PreciseTimer);
+	automoveTimer->setInterval(1000);
+	connect(automoveTimer, &QTimer::timeout, this, &normalmode::Probability);
+	automoveTimer->start();
+}
+
+void normalmode::Probability() {
+	int randomNumber = QRandomGenerator::global()->bounded(200);
+	if (randomNumber == 0) {
+		gotoAutoMovemode();
+	}
 }
 
 void normalmode::NormalModeRoleAnimation()
@@ -87,6 +103,28 @@ void normalmode::gotoWashmode()
 	this->close();
 }
 
+void normalmode::gotoGamemode()
+{
+	static int clickAreaX, clickAreaY;
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	game_main* g_m = new game_main();
+	g_m->move(clickAreaX - 250, clickAreaY - 200);
+	g_m->show();
+	this->close();
+}
+
+void normalmode::gotoAutoMovemode()
+{
+	static int clickAreaX, clickAreaY;
+	clickAreaX = this->x();
+	clickAreaY = this->y();
+	automovemode* am = new automovemode(nullptr, clickAreaX, clickAreaY);
+	am->move(clickAreaX + 30, clickAreaY - 120);
+	am->show();
+	this->close();
+}
+
 void normalmode::closeWidget()
 {
 	this->close();
@@ -104,8 +142,13 @@ void normalmode::openMenu()
 	gotoWashAction->setText("洗澡");
 	connect(gotoWashAction, &QAction::triggered, this, &normalmode::gotoWashmode);
 
+	QAction* gotoGameAction= new QAction;
+	gotoGameAction->setText("玩耍");
+	connect(gotoGameAction, &QAction::triggered, this, &normalmode::gotoGamemode);
+
 	menu->addAction(closeAction);
 	menu->addAction(gotoWashAction);
+	menu->addAction(gotoGameAction);
 	menu->exec(QCursor::pos());
 }
 
